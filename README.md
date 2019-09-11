@@ -1,29 +1,5 @@
-# wstool
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Web Scraper 辅助工具
+提高 Web Scraper 使用效率，并弥补导出文件为 csv 的错行缺点，包含 3 个模块：
+- 组装链接 —— 批量拼接链接；
+- 合成配置 —— 基于已有的抓取配置（sitemap）模板，批量替换启动链接（StartUrl），快速合成新的抓取配置；
+- 转换格式 —— csv 转为 xlsx，解决因内容中存在英文逗号和换行而导致的错行问题。

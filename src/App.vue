@@ -1,17 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <a-locale-provider :locale="zh_CN">
+    <div id="app">
+      <Layout />
+    </div>
+  </a-locale-provider>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import zh_CN from 'ant-design-vue/lib/locale-provider/zh_CN';
+import Layout from './components/Layout.vue';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      zh_CN,
+    }
+  },
   components: {
-    HelloWorld
+    Layout
   }
 }
 </script>
@@ -23,6 +30,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.row-center {
+  display: flex;
+  justify-content: center;
+}
+.row-between {
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 </style>
